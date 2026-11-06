@@ -1,0 +1,15 @@
+users:
+  query: "SELECT username, id, id AS end_user, 1 AS user_info FROM users"
+  metrics:
+    - user_info:
+        usage: "GAUGE"
+        description: "Mattermost user info"
+    - username:
+        usage: "LABEL"
+        description: "Mattermost username"
+    - id:
+        usage: "LABEL"
+        description: "Mattermost user id"
+    - end_user:
+        usage: "LABEL"
+        description: "Mattermost user id (join key)"
