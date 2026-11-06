@@ -1,0 +1,36 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: prometheus
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  - job_name: litellm
+    metrics_path: /metrics/
+    static_configs:
+      - targets: ["litellm:4000"]
+    metric_relabel_configs:
+      - source_labels: [end_user]
+        regex: "None"
+        replacement: "no-user"
+        target_label: end_user
+
+  - job_name: mattermost-db
+    static_configs:
+      - targets: ["postgres-exporter:9187"]
+
+  - job_name: llamacpp-chat
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["host.docker.internal:1234"]
+    params:
+      model: ["qwen3-coder:30b-a3b-instruct-ud-q3_K_XL"]
+
+  - job_name: llamacpp-embed
+    metrics_path: /metrics
+    static_configs:
+      - targets: ["host.docker.internal:1234"]
+    params:
+      model: ["nomic-ai/nomic-embed-text-v1-GGUF:Q4_K_M"]
