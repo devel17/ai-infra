@@ -1,0 +1,11 @@
+-rw-r--r--@  1 devel  staff   8988111072 25 окт 04:12 Qwen2.5-Coder-14B-Instruct-Q4_K_M.gguf
+-rw-r--r--@  1 devel  staff  13806312608 25 окт 18:50 Qwen3-Coder-30B-A3B-Instruct-UD-Q3_K_XL.gguf
+-rw-r--r--@  1 devel  staff          513 16 июл 19:53 config.ini
+drwxr-xr-x@ 10 devel  staff          320  1 ноя 03:25 mattermost-local
+-rw-r--r--@  1 devel  staff     84106624  4 ноя 02:07 nomic-embed-text-v1.Q4_K_M.gguf
+-rw-r--r--@  1 devel  staff    146146432  4 ноя 02:10 nomic-embed-text-v1.Q8_0.gguf
+drwxr-xr-x@ 31 devel  staff          992 26 окт 20:38 opencode-chat-bridge
+drwxr-xr-x@  5 devel  staff          160 25 окт 16:41 qwen25-coder
+drwxr-xr-x@  4 devel  staff          128  2 ноя 01:44 qwen3-coder
+-rw-r--r--@  1 devel  staff        93101 29 окт  2025 the-clear-framework.pdf
+-rw-r--r--@  1 devel  staff          389  2 ноя 00:40 tooling
